@@ -1,0 +1,14 @@
+# 申请SSL证书主要步骤：
+
+## 生成CSR文件
+
+```
+CSR就是Certificate Secure Request证书请求文件。
+
+这个文件是由申请人制作，在制作的同时，系统会产生2个密钥，一个是公钥就是这个CSR文件，另外一个是私钥，存放在服务器上
+
+一般APACHE等，使用OPENSSL命令行来生成KEY+CSR 两个文件
+Tomcat，JBoss，Resin等使用KEYTOOL来生成JKS和CSR文件
+IIS通过向导建立一个挂起的请求和一个CSR文件
+
+```
