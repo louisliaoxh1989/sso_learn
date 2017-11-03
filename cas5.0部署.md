@@ -44,3 +44,20 @@ cp -r cas-overlay-template/target/cas /opt/dev/tomcat8/webapps/
 #
 cas.authn.accept.users=casuser::Mellon
 ```
+
+**第五步：改为使用mysql数据库认证**
+
+``` XML
+# 修改cas-overlay-template文件夹下的pom.xml文件增加dependency
+  <dependency>
+   <groupId>org.apereo.cas</groupId>
+   <artifactId>cas-server-support-jdbc-drivers</artifactId>
+   <version>${cas.version}</version>
+</dependency>
+ <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>6.0.6</version>
+    <scope>runtime</scope>
+ </dependency>
+```
