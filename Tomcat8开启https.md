@@ -5,7 +5,7 @@
 jdk/bin/keytool -genkey -alias mydomain -keyalg RSA -keystore /opt/dev/tomcat8/conf/tomcat.keystore -storepass mydomain
 ```
 
-##2. 修改tomcat下面server.xml增加https的配置
+## 2.修改tomcat下面server.xml增加https的配置
 
 ```XML
 <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
