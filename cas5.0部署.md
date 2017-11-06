@@ -110,6 +110,13 @@ cas.authn.jdbc.query[0].fieldPassword=password
 
 #默认为NONE密码明文认证，可以自定义加密算法类(implements PasswordEncoder)
 #cas.authn.jdbc.query[0].passwordEncoder.type=NONE|DEFAULT|STANDARD|BCRYPT|SCRYPT|PBKDF2|com.example.CustomPasswordEncoder
+
+
+**参考文档**
+
+[基于CAS的单点登录SSO](http://blog.csdn.net/gobitan/article/details/77658360)
+
+[Apereo CAS 5.0.X 简明实用教程](http://blog.csdn.net/xichenguan/article/details/60785451)
 #cas.authn.jdbc.query[0].passwordEncoder.characterEncoding=
 #当passwordEncoder.type为default时，算法可定义MD5等算法。
 #cas.authn.jdbc.query[0].passwordEncoder.encodingAlgorithm=
