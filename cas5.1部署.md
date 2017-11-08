@@ -309,6 +309,7 @@ cas.serviceRegistry.jpa.driverClass=com.mysql.cj.jdbc.Driver
    final Map attributes = principal.getAttributes();
    
 ```
+>> [其他属性返回配置说明,如ReturnAllowedAttributeReleasePolicy、DenyAllAttributeReleasePolicy等](https://apereo.github.io/cas/5.1.x/integration/Attribute-Release-Policies.html)
 
 **第十步：新建数据库及表**
 
