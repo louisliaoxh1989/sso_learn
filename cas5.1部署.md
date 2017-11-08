@@ -755,6 +755,8 @@ https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显�
 
 [Apereo CAS 5.0.X 简明实用教程](http://blog.csdn.net/xichenguan/article/details/60785451)
 
+[cas加密方式分析](http://blog.csdn.net/zzq900503/article/details/55050106)
+
 [修改好的带数据库验证等的cas-server overlay-templat](https://github.com/louisliaoxh1989/cas-overlay-template)
 
 [修改好的cas-sample-java-webapp](https://github.com/louisliaoxh1989/cas-sample-java-webapp)
