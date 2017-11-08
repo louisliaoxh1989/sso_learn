@@ -753,6 +753,8 @@ https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显�
 
 [基于CAS的单点登录SSO](http://blog.csdn.net/gobitan/article/details/77658360)
 
+[CAS5.1.x overlay使用体验](http://maxith.com/2017/08/24/cas-5.1.1-overlay/)
+
 [Apereo CAS 5.0.X 简明实用教程](http://blog.csdn.net/xichenguan/article/details/60785451)
 
 [cas加密方式分析](http://blog.csdn.net/zzq900503/article/details/55050106)
