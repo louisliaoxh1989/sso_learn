@@ -757,6 +757,8 @@ https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显�
 
 [cas加密方式分析](http://blog.csdn.net/zzq900503/article/details/55050106)
 
+[sso cas4.0改造历程](http://blog.csdn.net/sinat_20689109/article/details/54632127)
+
 [修改好的带数据库验证等的cas-server overlay-templat](https://github.com/louisliaoxh1989/cas-overlay-template)
 
 [修改好的cas-sample-java-webapp](https://github.com/louisliaoxh1989/cas-sample-java-webapp)
