@@ -48,6 +48,8 @@ C  两字母国家代码 #如CN
                          certificateKeystoreType="JKS" certificateKeystorePassword="changeit" />
         </SSLHostConfig>
     </Connector>
+
+ <Host appBase="webapps" autoDeploy="true" name="example.org" unpackWARs="true">
 ```
 **第四步修改服务器的hosts**
 
