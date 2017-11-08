@@ -51,6 +51,8 @@ C  两字母国家代码 #如CN
 
  <Host appBase="webapps" autoDeploy="true" name="cas.example.org" unpackWARs="true">
 ```
+>> 参考[Tomcat8配置相关](https://github.com/louisliaoxh1989/sso_learn/tree/master/tomcat8-config)
+
 **第四步修改服务器的hosts**
 
 
@@ -140,6 +142,8 @@ sudo vi /etc/hosts
         </dependency>
 
 ```
+
+>> 参考[修改好的带数据库验证等的cas-server overlay-templat](https://github.com/louisliaoxh1989/cas-overlay-template)
 
 **第七步：编译生成war并拷贝到tomcat8的webapps目录中**
 
@@ -310,6 +314,9 @@ cas.serviceRegistry.jpa.driverClass=com.mysql.cj.jdbc.Driver
    
 ```
 >> [其他属性返回配置说明,如ReturnAllowedAttributeReleasePolicy、DenyAllAttributeReleasePolicy等](https://apereo.github.io/cas/5.1.x/integration/Attribute-Release-Policies.html)
+
+
+>> 参考[Cas5.1.5 Server 部署文件](https://github.com/louisliaoxh1989/sso_learn/tree/master/cas)
 
 **第十步：新建数据库及表**
 
@@ -720,6 +727,8 @@ git clone https://github.com/cas-projects/cas-sample-java-webapp.git
     <Set name="TrustStorePassword"><Property name="jetty.ssl.truststore.password" default="changeit" /></Set>
   </New>
 ```
+
+>> 参考 [修改好的cas-sample-java-webapp](https://github.com/louisliaoxh1989/cas-sample-java-webapp)
 4. 编译工程
 
 ```
@@ -738,6 +747,7 @@ https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显�
 [CAS+Client+for+Java+3.1](https://wiki.jasig.org/display/CASC/CAS+Client+for+Java+3.1)
 [java-cas-client] https://github.com/apereo/java-cas-client/blob/master/README.md
 
+[Cas5.1.5 客户端webapp Tomcat8 部署文件]https://github.com/louisliaoxh1989/sso_learn/tree/master/casapp)
 
 **参考文档**
 
@@ -745,5 +755,7 @@ https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显�
 
 [Apereo CAS 5.0.X 简明实用教程](http://blog.csdn.net/xichenguan/article/details/60785451)
 
+[修改好的带数据库验证等的cas-server overlay-templat](https://github.com/louisliaoxh1989/cas-overlay-template)
 
+[修改好的cas-sample-java-webapp](https://github.com/louisliaoxh1989/cas-sample-java-webapp)
 ```
