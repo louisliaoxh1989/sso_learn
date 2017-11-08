@@ -27,7 +27,7 @@ function gencert() {
 	keytool -exportcert -alias cas -storepass changeit -keystore /etc/cas/thekeystore -file /etc/cas/cas.cer
 }
 ```
->> 其中CN一般为网站的域名，这里修改为cas.example.org
+>> 其中CN一般为网站的域名，这里修改为cas.example.org,因为cas-overlay-template源代码中的etc下面的cas.properties文件配置的是cas.example.org,为了少修改文件所以就修改成了cas.example.org
 >> 其他可设置字段解释
 ```
 CN 一般为网站的域名 
@@ -49,7 +49,7 @@ C  两字母国家代码 #如CN
         </SSLHostConfig>
     </Connector>
 
- <Host appBase="webapps" autoDeploy="true" name="example.org" unpackWARs="true">
+ <Host appBase="webapps" autoDeploy="true" name="cas.example.org" unpackWARs="true">
 ```
 **第四步修改服务器的hosts**
 
