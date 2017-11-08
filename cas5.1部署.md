@@ -733,39 +733,17 @@ https://example.org:9443/sample
 跳转到cas server 的登陆地址如https://example.org:8443/cas/login?service=https%3A%2F%2Fexample.org%3A9443%2Fsample%2F ，输入用户名和密码后能跳转到
 https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显示用户名及其他属性值，表明部署成功
 ```
+6. CAS-client部署参考文档
+
+[CAS+Client+for+Java+3.1](https://wiki.jasig.org/display/CASC/CAS+Client+for+Java+3.1)
+[java-cas-client] https://github.com/apereo/java-cas-client/blob/master/README.md
+
 
 **参考文档**
 
 [基于CAS的单点登录SSO](http://blog.csdn.net/gobitan/article/details/77658360)
 
 [Apereo CAS 5.0.X 简明实用教程](http://blog.csdn.net/xichenguan/article/details/60785451)
-#cas.authn.jdbc.query[0].passwordEncoder.characterEncoding=
-#当passwordEncoder.type为default时，算法可定义MD5等算法。
-#cas.authn.jdbc.query[0].passwordEncoder.encodingAlgorithm=
-#cas.authn.jdbc.query[0].passwordEncoder.secret=
-#cas.authn.jdbc.query[0].passwordEncoder.strength=16
-#cas.authn.jdbc.query[0].principalTransformation.suffix=
-#cas.authn.jdbc.query[0].principalTransformation.caseConversion=NONE|UPPERCASE|LOWERCASE
-#cas.authn.jdbc.query[0].principalTransformation.prefix=
 
-#多属性返回(同样是各种试验，同事解决的哈)
-cas.authn.attributeRepository.jdbc[0].singleRow=true
-cas.authn.attributeRepository.jdbc[0].order=0
-cas.authn.attributeRepository.jdbc[0].url=jdbc:mysql://172.16.52.184:3306/castest?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
-cas.authn.attributeRepository.jdbc[0].username=name
-cas.authn.attributeRepository.jdbc[0].user=root
-cas.authn.attributeRepository.jdbc[0].password=1
-cas.authn.attributeRepository.jdbc[0].sql=select * from cas_user where name=?
-#取消以下两行则在返回属性中仅包含表中的这两个字段属性，注释情况下返回该表行所有属性
-#cas.authn.attributeRepository.jdbc[0].attributes.id=id
-#cas.authn.attributeRepository.jdbc[0].attributes.name=name
-cas.authn.attributeRepository.jdbc[0].dialect=org.hibernate.dialect.MySQLDialect
-cas.authn.attributeRepository.jdbc[0].ddlAuto=create-drop
-cas.authn.attributeRepository.jdbc[0].driverClass=com.mysql.cj.jdbc.Driver
-cas.authn.attributeRepository.jdbc[0].leakThreshold=10
-cas.authn.attributeRepository.jdbc[0].propagationBehaviorName=PROPAGATION_REQUIRED
-cas.authn.attributeRepository.jdbc[0].batchSize=1
-cas.authn.attributeRepository.jdbc[0].healthQuery=SELECT 1
-cas.authn.attributeRepository.jdbc[0].failFast=true
 
 ```
