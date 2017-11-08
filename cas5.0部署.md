@@ -1,15 +1,67 @@
-**第一步：开启Tomcat8的https**
-
-[请参照Tomcat8开启https](Tomcat8开启https.md)
-
-
-**第二步：下载cas官网提供的cas-overlay-template**
+**第一步：下载cas官网提供的cas-overlay-template**
 
 ```Bash
 https://github.com/apereo/cas-overlay-template.git
 ```
 
-**第三步：编译生成war并拷贝到tomcat8的webapps目录中**
+**第二步：生成storekey，为开启tomcat https访问做准备**
+
+```Bash
+cd cas-overlay-template
+# 修改bulid.sh 中的 function gencert() 为下面的
+
+function gencert() {
+	if [[ ! -d /etc/cas ]] ; then 
+		copy
+	fi
+	which keytool
+	if [[ $? -ne 0 ]] ; then
+	    echo Error: Java JDK \'keytool\' is not installed or is not in the path
+	    exit 1
+	fi
+	# override DNAME and CERT_SUBJ_ALT_NAMES before calling or use dummy values
+	DNAME="${DNAME:-CN=cas.example.org,OU=Example,OU=Org,C=US}"
+	CERT_SUBJ_ALT_NAMES="${CERT_SUBJ_ALT_NAMES:-dns:example.org,dns:localhost,ip:127.0.0.1}"
+	echo "Generating keystore for CAS with DN ${DNAME}"
+	keytool -genkeypair -alias cas -keyalg RSA -keypass changeit -storepass changeit -keystore /etc/cas/thekeystore -dname ${DNAME} -ext SAN=${CERT_SUBJ_ALT_NAMES}
+	keytool -exportcert -alias cas -storepass changeit -keystore /etc/cas/thekeystore -file /etc/cas/cas.cer
+}
+```
+>> 其中CN一般为网站的域名，这里修改为cas.example.org
+>> 其他可设置字段解释
+```
+CN 一般为网站的域名 
+OU 组织单位名称
+O  组织名称 #如hanghai University, 
+L  城市或区域名称  #如CD
+ST 州或省份名称   #如SC
+C  两字母国家代码 #如CN
+```
+**第三步Tomcat8开启https**
+
+修改Tomcat8的conf下面的server.xml
+```XML
+<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+               maxThreads="150" SSLEnabled="true">
+        <SSLHostConfig>
+            <Certificate certificateKeystoreFile="/etc/cas/thekeystore"
+                         certificateKeystoreType="JKS" certificateKeystorePassword="changeit" />
+        </SSLHostConfig>
+    </Connector>
+```
+**第四步修改服务器的hosts**
+
+
+```BASH
+sudo vi /etc/hosts
+```
+加入
+
+```XML
+127.0.0.1   cas.example.org
+127.0.0.1   example.org
+```
+**第五步：编译生成war并拷贝到tomcat8的webapps目录中**
 
 ```Bash
 # 生成需要部署的web文件 war
@@ -21,9 +73,9 @@ vi application.properties
 server.context-path=/cas
 server.port=8443
 
-server.ssl.key-store=file://opt/dev/tomcat8/conf/tomcat.keystore
-server.ssl.key-store-password=mydomain
-server.ssl.key-password=mydomain
+server.ssl.key-store=/etc/cas/thekeystore
+server.ssl.key-store-password=changeit
+server.ssl.key-password=changeit
 
 # 贝到tomcat8的webapps目录中
 cp -r cas-overlay-template/target/cas /opt/dev/tomcat8/webapps/
