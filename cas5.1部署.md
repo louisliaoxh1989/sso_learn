@@ -759,6 +759,8 @@ https://example.org:9443/sample/;jsessionid=1foqjq3ahply812qlgxnvyw08j且能显�
 
 [sso cas4.0改造历程](http://blog.csdn.net/sinat_20689109/article/details/54632127)
 
+[SO EASY CAS](http://blog.csdn.net/cl_andywin/article/category/6526852)
+
 [修改好的带数据库验证等的cas-server overlay-templat](https://github.com/louisliaoxh1989/cas-overlay-template)
 
 [修改好的cas-sample-java-webapp](https://github.com/louisliaoxh1989/cas-sample-java-webapp)
