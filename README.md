@@ -10,3 +10,7 @@
 包含内容：keystore的生成、tomcat8的https启用、cas5.1.5的server以及一个简单的客户端的部署
 ```
 
+
+## SSO参考
+[SSO理论，介绍得很详细，包括原理以及CAS的原理](http://blog.csdn.net/zzq900503/article/details/54646828)
+
