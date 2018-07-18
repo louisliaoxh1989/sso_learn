@@ -3,7 +3,7 @@
 ```
 jdk的security manager默认有一堆的根证书信任。如果你的https站点证书是花钱申请的，被这些根证书所信任，那使用java来访问此https站点会非常方便。
 
-但假如，你的https证书是自己签名的，就需要将证书导入至JDK的信任证书中，否则访问时会报SSL错误,这是由于https站点的安全证书不被JSSE所信任
+但假如，你的https证书是自己签名的，就需要将证书导入至JDK的信任证书中，否则访问时会报SSL错误,如 unable to find valid certification path to requested target这是由于https站点的安全证书不被JSSE所信任
 
 假如，你的webserice是基于https来进行访问，而此站点证书是自签名类型的，那么部署时一定要使用keytool进行证书导入，否则无法正常访问。
 
