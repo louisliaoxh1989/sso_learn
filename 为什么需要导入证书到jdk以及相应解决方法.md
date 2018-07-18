@@ -79,3 +79,5 @@ httpsConn.setSSLSocketFactory(ssf);
 这样，HttpsURLConnection对象就可以正常连接HTTPS了，
 无论其证书是否经权威机构的验证，只要实现了接口X509TrustManager的类MyX509TrustManager信任该证书。 
 ```
+[关于解决https JDK导入安全证书方面的踩的坑](https://blog.csdn.net/qq_24571209/article/details/80112192)
+[将安全证书导入到java的cacerts证书库](https://blog.csdn.net/wangjunjun2008/article/details/37662851)
