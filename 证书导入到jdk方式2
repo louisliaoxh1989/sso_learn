@@ -6,19 +6,19 @@
 
 在打开的窗口中,
 
-![](https://img-blog.csdn.net/20140710195812653?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ2p1bmp1bjIwMDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
+![](https://github.com/louisliaoxh1989/sso_learn/raw/master/images/2/1.png)  
 
 打开的窗口中,点击下一步即可,
 
-![](https://img-blog.csdn.net/20140710195838627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ2p1bmp1bjIwMDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![](https://github.com/louisliaoxh1989/sso_learn/raw/master/images/2/2.png)
 
 在正式编码格式中,选择指定的格式,点击下一步;
 
-![](https://img-blog.csdn.net/20140710200024676?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ2p1bmp1bjIwMDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
+![](https://github.com/louisliaoxh1989/sso_learn/raw/master/images/2/3.png)  
 
 指定生成证书文件的名称(此处为vbooking.cer)
 
-![](https://img-blog.csdn.net/20140710195803546?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ2p1bmp1bjIwMDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
+![](https://github.com/louisliaoxh1989/sso_learn/raw/master/images/2/4.png)  
 
   
 
@@ -54,7 +54,7 @@
 
 结果如下：
 
-![](https://img-blog.csdn.net/20140710200111834?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ2p1bmp1bjIwMDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
+![](https://github.com/louisliaoxh1989/sso_learn/raw/master/images/2/5.png)  
 
 如需更新证书,应先删除原证书,再导入新证书:
 
