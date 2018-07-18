@@ -4,7 +4,7 @@
 
 编辑文件 C:\\Windows\\System32\\drivers\\etc\\hosts 在文件末端添加下面的信息：
 
-![](https://img-blog.csdn.net/20180427193535419?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/1.png)
 
 1：win+R 快捷键打开DOS命令窗口
 
@@ -22,7 +22,7 @@
 
 -keystore G:\\ywj_cas.keystore 指定证书的位置
 
-![](https://img-blog.csdn.net/20180427192914253?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/2.png)
 
 【注意】：第一个让你输入的“您的名字与姓氏是什么”，请必须输入在C:\\Windows\\System32\\drivers\\etc\\hosts文件中加入的服务端的域名。
 
@@ -40,17 +40,17 @@
 
 说明：-alias后面的名称要与生成证书的命令里面的alias的名称一致. –keystore后面指定证书存放的位置，这里我放在G盘根目录，同时证书名称要与【生成证书】对应的命令里的keystore名称一致.这里是ywj_cas.keystore，-file后面才crt路径，我也指定在G盘根目录. –storepass的证书密码要与上面输入的密码一致.
 
-![](https://img-blog.csdn.net/20180427194704724?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/3.png)
 
-![](https://img-blog.csdn.net/20180427194752837?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![]https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/4.png)
 
 补充一下：这一步可能出现的权限问题如下图：
 
-![](https://img-blog.csdn.net/20180427195010243?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/5.png)
 
 这个很简单，只要在所需要写入的磁盘中增加访问
 
-![](https://img-blog.csdn.net/20180427195448514?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/6.png)
 
   
 
@@ -68,13 +68,13 @@
 
 上图：  
 
-![](https://img-blog.csdn.net/20180427200247362?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/7.png)
 
 第一个红色框是我进入的JDK目录第二个我没有加""报的错，第三个是我正确输入路径之后展示的效果就是正确的
 
 接下来输入密码changeit这是默认额的密码建议不要修改，不是输入上面的keypass密码啊，不要弄错了。
 
-![](https://img-blog.csdn.net/20180427200541339?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0NTcxMjA5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/louisliaoxh1989/sso_learn/blob/master/images/1/8.png)
 
 紧接着输入y便可JDK导入安全证书成功。
 
